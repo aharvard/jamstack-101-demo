@@ -22,7 +22,7 @@ body {
     line-height: 1.7;
     border-top: solid 6px var(--theme-color);
     background-color: #fff;
-    transform: scale(0.4) rotate(210deg);
+    transform: scale(0.2) rotate(210deg);
     transform-origin: 50% 32%;
     transition: all 500ms ease;
 }
