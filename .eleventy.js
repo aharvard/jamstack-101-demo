@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-    const { DATA_CONTEXT, CONTEXT } = process.env;
+    const { CONTEXT } = process.env;
 
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/images");
@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: "src",
-            data: `../data/${DATA_CONTEXT}`,
+            data: CONTEXT === "production" ? "../data/prod" : "../data/stage",
         },
     };
 };
